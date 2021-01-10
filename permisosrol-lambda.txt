@@ -1,0 +1,22 @@
+#estos son los permisos que tiene que tener el rol que ejecuta la lambda (como minimo)
+
+{
+  "Version": "2012-10-17",
+  "Id": "default",
+  "Statement": [
+    {
+      "Sid": "AWSEvents_paramaquinasnoche_Id215361388546",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "events.amazonaws.com"
+      },
+      "Action": "lambda:InvokeFunction",
+      "Resource": "arn:aws:lambda:eu-central-1:331596476271:function:pararinstancias",
+      "Condition": {
+        "ArnLike": {
+          "AWS:SourceArn": "arn:aws:events:eu-central-1:331596476271:rule/paramaquinasnoche"
+        }
+      }
+    }
+  ]
+}
