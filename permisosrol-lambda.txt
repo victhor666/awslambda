@@ -5,16 +5,16 @@
   "Id": "default",
   "Statement": [
     {
-      "Sid": "AWSEvents_paramaquinasnoche_Id215361388546",
+      "Sid": "apagalasmaquinasporlanoche",
       "Effect": "Allow",
       "Principal": {
         "Service": "events.amazonaws.com"
       },
       "Action": "lambda:InvokeFunction",
-      "Resource": "arn:aws:lambda:eu-central-1:331596476271:function:pararinstancias",
+      "Resource": "arn:aws:lambda:eu-central-1:##########:function:pararinstancias",
       "Condition": {
         "ArnLike": {
-          "AWS:SourceArn": "arn:aws:events:eu-central-1:331596476271:rule/paramaquinasnoche"
+          "AWS:SourceArn": "arn:aws:events:eu-central-1:#########:rule/paramaquinasnoche"
         }
       }
     }
